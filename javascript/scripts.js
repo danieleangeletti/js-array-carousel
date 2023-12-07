@@ -7,14 +7,15 @@ const images = [
 ]
 
 const my_cont = document.querySelector(".my-cont");
+const elements_cont = document.querySelector(".elements");
 
 
 for (let i = 0; i < images.length; i++) {
     const img_cont = document.createElement("div");
-    img_cont.classList.add(['w-100', 'h-100']);
+    img_cont.classList.add(['h-100']);
 
     img_cont.innerHTML = `
         <img class="w-100 h-100" src="${images[i]}" alt="">
     `
-    my_cont.append(img_cont);
+    elements_cont.append(img_cont);
 }
