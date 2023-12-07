@@ -1,0 +1,12 @@
+.my-cont {
+    width: 70vw;
+    height: 100vh;
+}
+
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}
