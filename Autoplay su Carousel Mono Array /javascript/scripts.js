@@ -9,8 +9,7 @@ const images = [
 const my_cont = document.querySelector(".my-cont");
 const elements_cont = document.querySelector(".elements");
 
-// const previous = document.querySelector(".previous");
-// const next = document.querySelector(".next");
+const stop_button = document.getElementById("stop-button");
 
 for (let i = 0; i < images.length; i++) {
     const img_cont = document.createElement("div");
@@ -34,6 +33,22 @@ for (let i = 0; i < images.length; i++) {
 let counter = 0;
 
 let clock = setInterval(next_foto, 3000);
+
+stop_button.addEventListener("click", function(){
+    
+    if (clock != null) {
+        
+        clearInterval(clock);
+        clock = null;
+
+    }
+
+    else {
+        
+        clock = setInterval(next_foto, 3000);
+
+    }
+})
 
 // FUNCTION
 
